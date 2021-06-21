@@ -6,20 +6,16 @@
  * @flow strict-local
  */
 
+import 'react-native-gesture-handler';
 import React from 'react';
 import type {Node} from 'react';
-import {SafeAreaView, Text, useColorScheme, View} from 'react-native';
+import { SafeAreaView, StatusBar, Text, useColorScheme, View } from "react-native";
+
+import Router from './src/navigation/Router';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 import HomeScreen from './src/screens/Home';
-import Post from './src/components/Post';
-import feed from './assets/data/feed';
-import SearchResultsScreen from './src/screens/SearchResults';
-import DestinationSearchScreen from './src/screens/DestinationSearch';
-import GuestsScreen from './src/screens/Guests';
-
-const post1 = feed[1];
 
 const App: () => Node = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -29,13 +25,7 @@ const App: () => Node = () => {
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
-      {/* <HomeScreen /> */}
-      {/* <Post post={post1}/> */}
-      {/* <SearchResultsScreen /> */}
-      {/* <DestinationSearchScreen /> */}
-      <GuestsScreen />
-    </SafeAreaView>
+    <Router />
   );
 };
 
