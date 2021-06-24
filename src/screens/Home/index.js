@@ -1,11 +1,15 @@
 import React from 'react';
-import {View, Text, ImageBackground, Pressable} from 'react-native';
+import {View, Text, ImageBackground, Pressable, Linking, TouchableOpacity} from 'react-native';
 import styles from './styles';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import {useNavigation} from '@react-navigation/native';
 
 const HomeScreen = props => {
   const navigation = useNavigation();
+  const onPress = () =>
+    Linking.canOpenURL('https://airbnb.com').then(() => {
+      Linking.openURL('https://airbnb.com');
+    });
   return (
     <View>
       {/* Search Button */}
@@ -21,11 +25,9 @@ const HomeScreen = props => {
         {/* Title */}
         <Text style={styles.title}>Go Near</Text>
         {/* Button */}
-        <Pressable
-          style={styles.button}
-          onPress={() => console.warn('Explore button clicked!')}>
+        <TouchableOpacity style={styles.button} onPress={onPress}>
           <Text style={styles.buttonText}>Explore nearby stays</Text>
-        </Pressable>
+        </TouchableOpacity>
       </ImageBackground>
     </View>
   );
