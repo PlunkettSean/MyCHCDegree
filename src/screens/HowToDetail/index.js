@@ -1,17 +1,17 @@
 import React from 'react';
 import {View} from 'react-native';
-import places from '../../../assets/data/feed';
-import DetailPost from '../../components/DetailPost';
+import places from '../../../assets/data/searchfeed';
+import HowToDetail from '../../components/HowToDetail';
 import {useRoute} from '@react-navigation/native';
 
-const PostScreen = props => {
+const HowToDetailScreen = props => {
   const route = useRoute();
   const post = places.find(place => place.id === route.params.postId);
   return (
     <View>
-      <DetailPost post={post} />
+      <HowToDetail post={post} />
     </View>
   );
 };
 
-export default PostScreen;
+export default HowToDetailScreen;

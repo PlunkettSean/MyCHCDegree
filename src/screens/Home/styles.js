@@ -1,42 +1,40 @@
 import {StyleSheet, Dimensions} from 'react-native';
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+  },
   image: {
     width: '100%',
-    height: 500,
-    resizeMode: 'cover',
-    justifyContent: 'center',
+    height: '100%',
+    flex: 1,
+    position: 'absolute',
   },
   title: {
-    fontSize: 80,
+    fontSize: 40,
     fontWeight: 'bold',
-    color: 'white',
-    width: '70%',
-    marginLeft: 25,
+    position: 'absolute',
+    top: 50,
+    color: '#FFD700',
+    width: '100%',
+    textAlign: 'center',
   },
-  button: {
-    backgroundColor: 'white',
-    width: 200,
-    marginLeft: 25,
-    marginTop: 25,
-    height: 40,
-    borderRadius: 10,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  buttonText: {
-    fontSize: 16,
-    fontWeight: 'bold',
+  bottomContainer: {
+    width: '100%',
+    height: 60,
+    position: 'absolute',
+    bottom: 30,
   },
   searchButton: {
     backgroundColor: 'white',
-    height: 60,
+    height: 50,
     borderRadius: 30,
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'row',
-    position: 'absolute',
-    top: 50,
     zIndex: 100,
     width: Dimensions.get('screen').width - 20,
     marginHorizontal: 10,
@@ -44,7 +42,7 @@ const styles = StyleSheet.create({
   searchButtonText: {
     fontSize: 16,
     fontWeight: 'bold',
-  }
+  },
 });
 
 export default styles;

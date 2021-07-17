@@ -1,10 +1,11 @@
 import React from 'react';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
-import SearchResultsScreen from '../screens/SearchResults';
+import HowToScreen from '../screens/HowTo';
+import LinksScreen from '../screens/Links';
 
 const Tab = createMaterialTopTabNavigator();
 
-const SearchResultsTabNavigator = props => {
+const TabNavigator = props => {
   return (
     <Tab.Navigator
       tabBarOptions={{
@@ -13,10 +14,10 @@ const SearchResultsTabNavigator = props => {
           backgroundColor: '#f15454',
         },
       }}>
-      <Tab.Screen name={'List'} component={SearchResultsScreen} />
-      <Tab.Screen name={'Map'} component={SearchResultsScreen} />
+      <Tab.Screen name={'How To'} component={HowToScreen} />
+      <Tab.Screen name={'Links'} component={LinksScreen} />
     </Tab.Navigator>
   );
 };
 
-export default SearchResultsTabNavigator;
+export default TabNavigator;

@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* AirbnbTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* AirbnbTests.m */; };
+		00E356F31AD99517003FC87E /* LogueLinkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* LogueLinkTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		6B682B5217B24E123E6A49AB /* libPods-Airbnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AFBD2233FA982ECC1C8A7CA5 /* libPods-Airbnb.a */; };
+		6B682B5217B24E123E6A49AB /* libPods-LogueLink.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AFBD2233FA982ECC1C8A7CA5 /* libPods-LogueLink.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		D2EAA803FDE4607E586CFC52 /* libPods-Airbnb-AirbnbTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59294C23A1B8296F25392C3A /* libPods-Airbnb-AirbnbTests.a */; };
+		D2EAA803FDE4607E586CFC52 /* libPods-LogueLink-LogueLinkTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59294C23A1B8296F25392C3A /* libPods-LogueLink-LogueLinkTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,28 +22,28 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = Airbnb;
+			remoteInfo = LogueLink;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00E356EE1AD99517003FC87E /* AirbnbTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirbnbTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* LogueLinkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogueLinkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* AirbnbTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AirbnbTests.m; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* Airbnb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Airbnb.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Airbnb/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Airbnb/AppDelegate.m; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Airbnb/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Airbnb/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Airbnb/main.m; sourceTree = "<group>"; };
-		159F24914DE9EAF837FEDB72 /* Pods-Airbnb.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Airbnb.debug.xcconfig"; path = "Target Support Files/Pods-Airbnb/Pods-Airbnb.debug.xcconfig"; sourceTree = "<group>"; };
-		59294C23A1B8296F25392C3A /* libPods-Airbnb-AirbnbTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Airbnb-AirbnbTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7DF7B93EAA6FDCAE8023C82B /* Pods-Airbnb-AirbnbTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Airbnb-AirbnbTests.debug.xcconfig"; path = "Target Support Files/Pods-Airbnb-AirbnbTests/Pods-Airbnb-AirbnbTests.debug.xcconfig"; sourceTree = "<group>"; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Airbnb/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		97F67D1BF14CF93B770D7564 /* Pods-Airbnb.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Airbnb.release.xcconfig"; path = "Target Support Files/Pods-Airbnb/Pods-Airbnb.release.xcconfig"; sourceTree = "<group>"; };
-		AFBD2233FA982ECC1C8A7CA5 /* libPods-Airbnb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Airbnb.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356F21AD99517003FC87E /* LogueLinkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LogueLinkTests.m; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* LogueLink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LogueLink.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = LogueLink/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = LogueLink/AppDelegate.m; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = LogueLink/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = LogueLink/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = LogueLink/main.m; sourceTree = "<group>"; };
+		159F24914DE9EAF837FEDB72 /* Pods-LogueLink.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogueLink.debug.xcconfig"; path = "Target Support Files/Pods-LogueLink/Pods-LogueLink.debug.xcconfig"; sourceTree = "<group>"; };
+		59294C23A1B8296F25392C3A /* libPods-LogueLink-LogueLinkTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LogueLink-LogueLinkTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DF7B93EAA6FDCAE8023C82B /* Pods-LogueLink-LogueLinkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogueLink-LogueLinkTests.debug.xcconfig"; path = "Target Support Files/Pods-LogueLink-LogueLinkTests/Pods-LogueLink-LogueLinkTests.debug.xcconfig"; sourceTree = "<group>"; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = LogueLink/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		97F67D1BF14CF93B770D7564 /* Pods-LogueLink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogueLink.release.xcconfig"; path = "Target Support Files/Pods-LogueLink/Pods-LogueLink.release.xcconfig"; sourceTree = "<group>"; };
+		AFBD2233FA982ECC1C8A7CA5 /* libPods-LogueLink.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LogueLink.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		FF895B496B5CD525C66DC5DE /* Pods-Airbnb-AirbnbTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Airbnb-AirbnbTests.release.xcconfig"; path = "Target Support Files/Pods-Airbnb-AirbnbTests/Pods-Airbnb-AirbnbTests.release.xcconfig"; sourceTree = "<group>"; };
+		FF895B496B5CD525C66DC5DE /* Pods-LogueLink-LogueLinkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogueLink-LogueLinkTests.release.xcconfig"; path = "Target Support Files/Pods-LogueLink-LogueLinkTests/Pods-LogueLink-LogueLinkTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2EAA803FDE4607E586CFC52 /* libPods-Airbnb-AirbnbTests.a in Frameworks */,
+				D2EAA803FDE4607E586CFC52 /* libPods-LogueLink-LogueLinkTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,20 +59,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B682B5217B24E123E6A49AB /* libPods-Airbnb.a in Frameworks */,
+				6B682B5217B24E123E6A49AB /* libPods-LogueLink.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* AirbnbTests */ = {
+		00E356EF1AD99517003FC87E /* LogueLinkTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* AirbnbTests.m */,
+				00E356F21AD99517003FC87E /* LogueLinkTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = AirbnbTests;
+			path = LogueLinkTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -83,7 +83,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* Airbnb */ = {
+		13B07FAE1A68108700A75B9A /* LogueLink */ = {
 			isa = PBXGroup;
 			children = (
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -93,15 +93,15 @@
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = Airbnb;
+			name = LogueLink;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				AFBD2233FA982ECC1C8A7CA5 /* libPods-Airbnb.a */,
-				59294C23A1B8296F25392C3A /* libPods-Airbnb-AirbnbTests.a */,
+				AFBD2233FA982ECC1C8A7CA5 /* libPods-LogueLink.a */,
+				59294C23A1B8296F25392C3A /* libPods-LogueLink-LogueLinkTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -116,9 +116,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* Airbnb */,
+				13B07FAE1A68108700A75B9A /* LogueLink */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* AirbnbTests */,
+				00E356EF1AD99517003FC87E /* LogueLinkTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				CFC3349DCB44D60F488D2632 /* Pods */,
@@ -131,8 +131,8 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* Airbnb.app */,
-				00E356EE1AD99517003FC87E /* AirbnbTests.xctest */,
+				13B07F961A680F5B00A75B9A /* LogueLink.app */,
+				00E356EE1AD99517003FC87E /* LogueLinkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,10 +140,10 @@
 		CFC3349DCB44D60F488D2632 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				159F24914DE9EAF837FEDB72 /* Pods-Airbnb.debug.xcconfig */,
-				97F67D1BF14CF93B770D7564 /* Pods-Airbnb.release.xcconfig */,
-				7DF7B93EAA6FDCAE8023C82B /* Pods-Airbnb-AirbnbTests.debug.xcconfig */,
-				FF895B496B5CD525C66DC5DE /* Pods-Airbnb-AirbnbTests.release.xcconfig */,
+				159F24914DE9EAF837FEDB72 /* Pods-LogueLink.debug.xcconfig */,
+				97F67D1BF14CF93B770D7564 /* Pods-LogueLink.release.xcconfig */,
+				7DF7B93EAA6FDCAE8023C82B /* Pods-LogueLink-LogueLinkTests.debug.xcconfig */,
+				FF895B496B5CD525C66DC5DE /* Pods-LogueLink-LogueLinkTests.release.xcconfig */,
 			);
 			name = Pods;
 			path = Pods;
@@ -152,9 +152,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* AirbnbTests */ = {
+		00E356ED1AD99517003FC87E /* LogueLinkTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "AirbnbTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "LogueLinkTests" */;
 			buildPhases = (
 				E2150E528A639EDC86CEA63F /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -167,14 +167,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = AirbnbTests;
-			productName = AirbnbTests;
-			productReference = 00E356EE1AD99517003FC87E /* AirbnbTests.xctest */;
+			name = LogueLinkTests;
+			productName = LogueLinkTests;
+			productReference = 00E356EE1AD99517003FC87E /* LogueLinkTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* Airbnb */ = {
+		13B07F861A680F5B00A75B9A /* LogueLink */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Airbnb" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "LogueLink" */;
 			buildPhases = (
 				72E73D36E5DED9F363EF3558 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -188,9 +188,9 @@
 			);
 			dependencies = (
 			);
-			name = Airbnb;
-			productName = Airbnb;
-			productReference = 13B07F961A680F5B00A75B9A /* Airbnb.app */;
+			name = LogueLink;
+			productName = LogueLink;
+			productReference = 13B07F961A680F5B00A75B9A /* LogueLink.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -210,7 +210,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Airbnb" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "LogueLink" */;
 			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -223,8 +223,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* Airbnb */,
-				00E356ED1AD99517003FC87E /* AirbnbTests */,
+				13B07F861A680F5B00A75B9A /* LogueLink */,
+				00E356ED1AD99517003FC87E /* LogueLinkTests */,
 			);
 		};
 /* End PBXProject section */
@@ -278,7 +278,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Airbnb-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-LogueLink-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -291,15 +291,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Airbnb/Pods-Airbnb-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-LogueLink/Pods-LogueLink-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Airbnb/Pods-Airbnb-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-LogueLink/Pods-LogueLink-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Airbnb/Pods-Airbnb-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LogueLink/Pods-LogueLink-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D345BEBE20F3FD91B770E4D7 /* [CP] Copy Pods Resources */ = {
@@ -308,15 +308,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Airbnb-AirbnbTests/Pods-Airbnb-AirbnbTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-LogueLink-LogueLinkTests/Pods-LogueLink-LogueLinkTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Airbnb-AirbnbTests/Pods-Airbnb-AirbnbTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-LogueLink-LogueLinkTests/Pods-LogueLink-LogueLinkTests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Airbnb-AirbnbTests/Pods-Airbnb-AirbnbTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LogueLink-LogueLinkTests/Pods-LogueLink-LogueLinkTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E2150E528A639EDC86CEA63F /* [CP] Check Pods Manifest.lock */ = {
@@ -334,7 +334,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Airbnb-AirbnbTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-LogueLink-LogueLinkTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -367,7 +367,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* AirbnbTests.m in Sources */,
+				00E356F31AD99517003FC87E /* LogueLinkTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,7 +385,7 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* Airbnb */;
+			target = 13B07F861A680F5B00A75B9A /* LogueLink */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -393,14 +393,14 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7DF7B93EAA6FDCAE8023C82B /* Pods-Airbnb-AirbnbTests.debug.xcconfig */;
+			baseConfigurationReference = 7DF7B93EAA6FDCAE8023C82B /* Pods-LogueLink-LogueLinkTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = AirbnbTests/Info.plist;
+				INFOPLIST_FILE = LogueLinkTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -414,17 +414,17 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Airbnb.app/Airbnb";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LogueLink.app/LogueLink";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF895B496B5CD525C66DC5DE /* Pods-Airbnb-AirbnbTests.release.xcconfig */;
+			baseConfigurationReference = FF895B496B5CD525C66DC5DE /* Pods-LogueLink-LogueLinkTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = AirbnbTests/Info.plist;
+				INFOPLIST_FILE = LogueLinkTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -438,19 +438,19 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Airbnb.app/Airbnb";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LogueLink.app/LogueLink";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 159F24914DE9EAF837FEDB72 /* Pods-Airbnb.debug.xcconfig */;
+			baseConfigurationReference = 159F24914DE9EAF837FEDB72 /* Pods-LogueLink.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = Airbnb/Info.plist;
+				INFOPLIST_FILE = LogueLink/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -461,7 +461,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = Airbnb;
+				PRODUCT_NAME = LogueLink;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -470,12 +470,12 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 97F67D1BF14CF93B770D7564 /* Pods-Airbnb.release.xcconfig */;
+			baseConfigurationReference = 97F67D1BF14CF93B770D7564 /* Pods-LogueLink.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = Airbnb/Info.plist;
+				INFOPLIST_FILE = LogueLink/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -486,7 +486,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = Airbnb;
+				PRODUCT_NAME = LogueLink;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -618,7 +618,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "AirbnbTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "LogueLinkTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -627,7 +627,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Airbnb" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "LogueLink" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -636,7 +636,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Airbnb" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "LogueLink" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

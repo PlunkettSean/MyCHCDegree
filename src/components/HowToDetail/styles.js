@@ -2,22 +2,21 @@ import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
-    margin: 10,
-  },
-  touchable: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    margin: 20,
+    justifyContent: 'center',
   },
   image: {
-    width: 70,
-    height: 70,
+    width: '100%',
+    height: 200,
     borderRadius: 10,
+    alignSelf: 'center',
+    margin: 10,
   },
   description: {
     fontSize: 18,
-    marginLeft: 10,
-    flex: 1,
-    flexWrap: 'wrap',
+    lineHeight: 26,
+    paddingTop: 10,
+    fontWeight: 'bold',
   },
 });
 

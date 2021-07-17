@@ -3,12 +3,13 @@ import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
   container: {
     margin: 20,
+    justifyContent: 'center',
   },
   image: {
-    width: '100%',
-    aspectRatio: 3 / 2,
+    aspectRatio: 1,
     resizeMode: 'cover',
     borderRadius: 10,
+    alignSelf: 'center',
   },
   bedrooms: {
     marginVertical: 10,
@@ -18,6 +19,7 @@ const styles = StyleSheet.create({
   description: {
     fontSize: 18,
     lineHeight: 26,
+    paddingTop: 10,
   },
   prices: {
     fontSize: 18,
@@ -33,11 +35,6 @@ const styles = StyleSheet.create({
   totalPrice: {
     color: '#9e9a9a',
     textDecorationLine: 'underline',
-  },
-  longDescription: {
-    marginVertical: 20,
-    fontSize: 16,
-    lineHeight: 24,
   },
 });
 
