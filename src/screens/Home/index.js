@@ -12,7 +12,7 @@ const HomeScreen = props => {
         source={require('../../../assets/images/wallpaper.jpg')}
         style={styles.image}>
         {/* Title */}
-        <Text style={styles.title}>Logue Link</Text>
+        <Text style={styles.title}>My CHC Degree</Text>
       </ImageBackground>
       {/* Button */}
       <View style={styles.bottomContainer}>
