@@ -1,9 +1,11 @@
-import React, {useState} from 'react';
-import {View, Text, TouchableOpacity, TextInput} from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, TouchableOpacity, TextInput } from 'react-native';
 import styles from './styles';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import SelectDropdown from 'react-native-select-dropdown/src/SelectDropdown';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import { useNavigation } from '@react-navigation/native';
+const database = require('../../components/Handlers/database.js');
 
 const NewCourseScreen = props => {
   const [code, setCode] = useState('');
@@ -11,23 +13,67 @@ const NewCourseScreen = props => {
   const [semester, setSemester] = useState('');
   const [credits, setCredits] = useState('');
   const [status, setStatus] = useState('');
+  const [designator, setDesignator] = useState('');
+
+  const statuses = ['Complete', 'In Progress', 'Not Complete'];
+  const designators = ['1st Major', '2nd Major', '1st Minor', '2nd Minor', 'Core', 'Elective', 'General Elective']
+  const navigation = useNavigation();
 
   const onCourseAdd = () => {
-    console.warn(
-      'New Course Added: %s, %s, %s, %s',
+    if (!code) {
+      alert('Please fill in code');
+      return;
+    }
+    if (!name) {
+      alert('Please fill in Course Name');
+      return;
+    }
+    if (!credits) {
+      alert('Please fill in Credits');
+      return;
+    }
+    if (!semester) {
+      alert('Please fill in Semester');
+      return;
+    }
+    if (!status) {
+      alert('Please select a Status');
+      return;
+    }
+    if (!designator) {
+      alert('Please select a Designator');
+      return;
+    }
+
+    const course = {
+      code,
+      name,
+      credits,
+      semester,
       status,
+      designator
+    }
+
+    database.addCourse(code,
+      name, credits, semester, status, designator).catch(e => {
+        console.log(e);
+      });
+
+    console.warn(
+      code,
       name,
       semester,
       credits,
+      status,
+      designator
     );
+    navigation.navigate('Get started!')
   };
-
-  const statuses = ['Complete', 'In Progress', 'Not Complete'];
 
   return (
     <View style={styles.container}>
       <View style={styles.headerContainer}>
-        <TouchableOpacity style={styles.button} onPress={onCourseAdd}>
+        <TouchableOpacity style={styles.button} onPress={onCourseAdd} >
           <Text style={styles.buttonText}>Add</Text>
         </TouchableOpacity>
       </View>
@@ -73,6 +119,23 @@ const NewCourseScreen = props => {
           value={status}
           onSelect={(selectedItem, index) => setStatus(selectedItem)}
           defaultButtonText={'Status ...'}
+          buttonStyle={styles.dropDownButton}
+          buttonTextStyle={styles.dropDownButtonText}
+          renderDropdownIcon={() => {
+            return (
+              <FontAwesome name={'chevron-down'} color={'lightgrey'} size={18} />
+            );
+          }}
+          dropdownIconPosition={'right'}
+          dropdownStyle={styles.dropDownStyle}
+          rowStyle={styles.dropDownRowStyle}
+          rowTextStyle={styles.dropDownRowTextStyle}
+        />
+        <SelectDropdown
+          data={designators}
+          value={designator}
+          onSelect={(selectedItem, index) => setDesignator(selectedItem)}
+          defaultButtonText={'Designator ...'}
           buttonStyle={styles.dropDownButton}
           buttonTextStyle={styles.dropDownButtonText}
           renderDropdownIcon={() => {

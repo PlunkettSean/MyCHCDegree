@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     padding: 15,
     width: '100%',
   },
-  codeInput:{
+  codeInput: {
     fontSize: 18,
     marginBottom: 20,
     borderBottomWidth: 1.0,
@@ -55,6 +55,7 @@ const styles = StyleSheet.create({
     width: '100%',
     height: 50,
     borderRadius: 8,
+    marginBottom: 20,
     borderColor: 'lightgrey',
     borderWidth: 1.0,
   },
@@ -62,7 +63,7 @@ const styles = StyleSheet.create({
     textAlign: 'left',
     fontSize: 18,
   },
-  dropDownStyle:{
+  dropDownStyle: {
   },
   dropDownRowStyle: {
     borderBottomColor: '#C5C5C5',

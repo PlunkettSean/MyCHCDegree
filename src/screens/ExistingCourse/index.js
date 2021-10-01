@@ -1,23 +1,46 @@
-import React, {useState} from 'react';
-import {View, Text, TouchableOpacity, TextInput} from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, Text, TouchableOpacity, TextInput } from 'react-native';
 import styles from './styles';
 import SelectDropdown from 'react-native-select-dropdown/src/SelectDropdown';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import {useRoute} from '@react-navigation/native';
+import { useRoute } from '@react-navigation/native';
 import courses from '../../../assets/data/courses';
 
 const ExistingCourseScreen = props => {
   const route = useRoute();
-  const post = courses.find(course => course.id === route.params.postId);
 
-  const [code, setCode] = useState(post.code);
-  const [name, setName] = useState(post.name);
-  const [semester, setSemester] = useState(post.semester);
-  const [credits, setCredits] = useState(post.credits);
-  const [status, setStatus] = useState(post.status);
+  console.warn(route.params.postId)
+
+  const [post, setPost] = useState([]);
+
+  const getCourseByID = (id) => {
+    courseDB.transaction(txn => {
+      txn.executeSql(
+        `SELECT * FROM ${tableName} WHERE id IN ('${id}') LIMIT 1`,
+        [],
+        (sqlTxn, res) => {
+          console.log("Courses retrieved successfully");
+          let len = res.rows.length;
+          console.warn(len)
+          if (len > 0) {
+            let results = [];
+            for (let i = 0; i < len; i++) {
+              let item = res.rows.item(i);
+              results.push({ id: item.id, code: item.code, name: item.name, credits: item.credits, semester: item.semester, status: item.status, designator: item.designator });
+              console.log(results[i])
+            }
+            setPost(results);
+          }
+        },
+        error => {
+          console.log("error on getting courses " + error.message);
+        },
+      );
+    });
+  }
 
   const onCourseUpdate = () => {
-    console.warn('Course Updated!');
+    console.warn(designator);
   };
 
   const onCourseDelete = () => {
@@ -25,6 +48,18 @@ const ExistingCourseScreen = props => {
   };
 
   const statuses = ['Complete', 'In Progress', 'Not Complete'];
+  const designators = ['1st Major', '2nd Major', '1st Minor', '2nd Minor', 'Core', 'Elective', 'General Elective']
+
+  useEffect(async () => {
+    await getCourseByID(route.params.postId);
+  }, []);
+
+  const [code, setCode] = useState(post.code);
+  const [name, setName] = useState(post.name);
+  const [semester, setSemester] = useState(post.semester);
+  const [credits, setCredits] = useState(post.credits);
+  const [status, setStatus] = useState(post.status);
+  const [designator, setDesignator] = useState(post.designator);
 
   return (
     <View style={styles.container}>
@@ -78,7 +113,7 @@ const ExistingCourseScreen = props => {
         <SelectDropdown
           data={statuses}
           value={status}
-          onSelect={(selectedItem, index) => setStatus(selectedItem)}
+          onSelect={(selectedItem) => setStatus(selectedItem)}
           defaultButtonText={'Status ...'}
           buttonStyle={styles.dropDownButton}
           buttonTextStyle={styles.dropDownButtonText}
@@ -92,6 +127,24 @@ const ExistingCourseScreen = props => {
           rowStyle={styles.dropDownRowStyle}
           rowTextStyle={styles.dropDownRowTextStyle}
           defaultValue={post.status}
+        />
+        <SelectDropdown
+          data={designators}
+          value={designator}
+          onSelect={(selectedItem) => setDesignator(selectedItem)}
+          defaultButtonText={'Designator ...'}
+          buttonStyle={styles.dropDownButton}
+          buttonTextStyle={styles.dropDownButtonText}
+          renderDropdownIcon={() => {
+            return (
+              <FontAwesome name={'chevron-down'} color={'lightgrey'} size={18} />
+            );
+          }}
+          dropdownIconPosition={'right'}
+          dropdownStyle={styles.dropDownStyle}
+          rowStyle={styles.dropDownRowStyle}
+          rowTextStyle={styles.dropDownRowTextStyle}
+          defaultValue={post.designator}
         />
       </View>
     </View>

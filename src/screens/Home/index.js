@@ -1,8 +1,8 @@
 import React from 'react';
-import {View, Text, ImageBackground, Pressable} from 'react-native';
+import { View, Text, ImageBackground, Pressable } from 'react-native';
 import styles from './styles';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import {useNavigation} from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 
 const HomeScreen = props => {
   const navigation = useNavigation();

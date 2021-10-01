@@ -1,4 +1,4 @@
-import {StyleSheet, Dimensions} from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
   },
   searchButton: {
     backgroundColor: 'white',
+    margin: 2,
     height: 50,
     borderRadius: 30,
     justifyContent: 'center',
