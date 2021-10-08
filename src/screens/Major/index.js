@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { View, Text, SectionList, FlatList } from 'react-native';
-import elective from '../../../assets/data/elective.js';
 import styles from './styles';
 import Course from '../../components/Course';
 import NewCourseButton from '../../components/NewCourseButton';

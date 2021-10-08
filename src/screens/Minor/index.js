@@ -20,7 +20,7 @@ const MinorScreen = props => {
   const getStatusCourses = (status) => {
     courseDB.transaction(txn => {
       txn.executeSql(
-        `SELECT * FROM ${tableName} WHERE status IN ('${status}') AND designator IN ('Core')`,
+        `SELECT * FROM ${tableName} WHERE status IN ('${status}') AND designator IN ('Minor')`,
         [],
         (sqlTxn, res) => {
           console.log("Courses retrieved successfully");
