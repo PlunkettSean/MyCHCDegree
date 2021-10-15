@@ -13,7 +13,7 @@ import Router from './src/navigation/Router';
 const database = require('./src/components/Handlers/database.js')
 
 
-const App: () => Node = () => {
+const App = () => {
   try {
     database.createTable();
   } catch (error) {

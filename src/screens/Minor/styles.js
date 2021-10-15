@@ -8,6 +8,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingLeft: 10,
   },
+  outer: {
+    height: '100%',
+
+  },
 });
 
 export default styles;

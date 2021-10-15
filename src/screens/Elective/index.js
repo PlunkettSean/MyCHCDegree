@@ -54,7 +54,7 @@ const ElectiveScreen = props => {
   useEffect(async () => {
     await getStatusCourses("Complete");
     await getStatusCourses("In Progress");
-    await getStatusCourses("Complete");
+    await getStatusCourses("Not Complete");
   }, []);
 
   var complete = 0;
@@ -74,7 +74,7 @@ const ElectiveScreen = props => {
   return (
     <View>
       <View>
-        <SectionList
+        <SectionList style={styles.outer}
           sections={[
             { title: 'Complete ' + complete + ' cr.', data: completeCourses },
             { title: 'In Progress ' + inProgress + ' cr.', data: inProgressCourses },

@@ -5,6 +5,7 @@ import styles from './styles';
 import Course from '../../components/Course';
 import NewCourseButton from '../../components/NewCourseButton';
 import { openDatabase } from 'react-native-sqlite-storage';
+import { ScrollView } from "react-native-gesture-handler";
 
 const database = require('../../components/Handlers/database.js');
 
@@ -76,7 +77,7 @@ const AllScreen = props => {
   return (
     <View>
       <View>
-        <SectionList
+        <SectionList style={styles.outer}
           sections={[
             { title: 'Complete ' + complete + ' cr.', data: completeCourses },
             { title: 'In Progress ' + inProgress + ' cr.', data: inProgressCourses },

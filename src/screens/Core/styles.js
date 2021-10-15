@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   completeContainer: {
@@ -7,6 +7,10 @@ const styles = StyleSheet.create({
     backgroundColor: 'lightgrey',
     justifyContent: 'center',
     paddingLeft: 10,
+  },
+  outer: {
+    height: '100%',
+
   },
 });
 

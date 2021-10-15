@@ -20,7 +20,7 @@ const MajorScreen = props => {
   const getStatusCourses = (status) => {
     courseDB.transaction(txn => {
       txn.executeSql(
-        `SELECT * FROM ${tableName} WHERE status IN ('${status}') AND designator IN ('1st Major')`,
+        `SELECT * FROM ${tableName} WHERE status IN ('${status}') AND designator IN ('2nd Major', '1st Major')`,
         [],
         (sqlTxn, res) => {
           console.log("Courses retrieved successfully");
@@ -56,7 +56,7 @@ const MajorScreen = props => {
   useEffect(async () => {
     await getStatusCourses("Complete");
     await getStatusCourses("In Progress");
-    await getStatusCourses("Complete");
+    await getStatusCourses("Not Complete");
   }, []);
 
   var complete = 0;
@@ -76,7 +76,7 @@ const MajorScreen = props => {
   return (
     <View>
       <View>
-        <SectionList
+        <SectionList style={styles.outer}
           sections={[
             { title: 'Complete ' + complete + ' cr.', data: completeCourses },
             { title: 'In Progress ' + inProgress + ' cr.', data: inProgressCourses },
