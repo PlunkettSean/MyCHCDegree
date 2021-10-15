@@ -25,7 +25,7 @@ const MajorScreen = props => {
         (sqlTxn, res) => {
           console.log("Courses retrieved successfully");
           let len = res.rows.length;
-          console.warn(len)
+          // console.warn(len)
           if (len > 0) {
             let results = [];
             for (let i = 0; i < len; i++) {
@@ -43,7 +43,7 @@ const MajorScreen = props => {
               setNotCompleteCourses(results);
             }
 
-            console.warn('[DATA]', results[0])
+            // console.warn('[DATA]', results[0])
           }
         },
         error => {

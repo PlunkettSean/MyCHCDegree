@@ -42,7 +42,7 @@ module.exports = {
                 (sqlTxn, res) => {
                     console.log("Courses retrieved successfully");
                     let len = res.rows.length;
-                    console.warn(len)
+                    // console.warn(len)
                     if (len > 0) {
                         let results = [];
                         for (let i = 0; i < len; i++) {
@@ -50,7 +50,7 @@ module.exports = {
                             results.push({ id: item.id, code: item.code, name: item.name, credits: item.credits, semester: item.semester, status: item.status, designator: item.designator });
                             console.log(results[i])
                         }
-                        console.warn('[DATA]', results[0])
+                        // console.warn('[DATA]', results[0])
                         list = results;
                     }
                 },

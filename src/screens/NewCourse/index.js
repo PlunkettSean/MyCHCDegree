@@ -58,7 +58,7 @@ const NewCourseScreen = props => {
       name, credits, semester, status, designator).catch(e => {
         console.log(e);
       });
-
+    /*
     console.warn(
       code,
       name,
@@ -67,6 +67,7 @@ const NewCourseScreen = props => {
       status,
       designator
     );
+    */
     navigation.navigate('Get started!')
   };
 
