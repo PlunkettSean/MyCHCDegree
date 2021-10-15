@@ -79,9 +79,9 @@ const AllScreen = props => {
       <View>
         <SectionList style={styles.outer}
           sections={[
-            { title: 'Complete ' + complete + ' cr.', data: completeCourses },
-            { title: 'In Progress ' + inProgress + ' cr.', data: inProgressCourses },
-            { title: 'Not Complete ' + notComplete + ' cr.', data: notCompleteCourses },
+            { title: 'Courses Complete ' + complete + ' cr.', data: completeCourses },
+            { title: 'Courses In Progress ' + inProgress + ' cr.', data: inProgressCourses },
+            { title: 'Courses Not Complete ' + notComplete + ' cr.', data: notCompleteCourses },
           ]}
           renderItem={({ item }) => <Course post={item} />}
           renderSectionHeader={({ section }) => (

@@ -48,7 +48,8 @@ const ExistingCourseScreen = props => {
     }
 
     updateCourse();
-    navigation.navigate('Get started!')
+    alert('Course Updated!');
+    navigation.navigate('Home')
   };
 
   const onCourseDelete = () => {
@@ -68,8 +69,9 @@ const ExistingCourseScreen = props => {
     }
 
     deleteCourse();
+    alert('Course Deleted!');
     // console.warn('Course Deleted!');
-    navigation.navigate('Get started!')
+    navigation.navigate('Home')
   };
 
 

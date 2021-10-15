@@ -20,7 +20,7 @@ const MinorScreen = props => {
   const getStatusCourses = (status) => {
     courseDB.transaction(txn => {
       txn.executeSql(
-        `SELECT * FROM ${tableName} WHERE status IN ('${status}') AND designator IN ('1st Minor')`,
+        `SELECT * FROM ${tableName} WHERE status IN ('${status}') AND designator IN ('1st Minor', '2nd Minor')`,
         [],
         (sqlTxn, res) => {
           console.log("Courses retrieved successfully");
@@ -78,9 +78,9 @@ const MinorScreen = props => {
       <View>
         <SectionList style={styles.outer}
           sections={[
-            { title: 'Complete ' + complete + ' cr.', data: completeCourses },
-            { title: 'In Progress ' + inProgress + ' cr.', data: inProgressCourses },
-            { title: 'Not Complete ' + notComplete + ' cr.', data: notCompleteCourses },
+            { title: 'Courses Complete ' + complete + ' cr.', data: completeCourses },
+            { title: 'Courses In Progress ' + inProgress + ' cr.', data: inProgressCourses },
+            { title: 'Courses Not Complete ' + notComplete + ' cr.', data: notCompleteCourses },
           ]}
           renderItem={({ item }) => <Course post={item} />}
           renderSectionHeader={({ section }) => (

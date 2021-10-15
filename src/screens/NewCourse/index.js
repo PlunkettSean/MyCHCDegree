@@ -68,7 +68,8 @@ const NewCourseScreen = props => {
       designator
     );
     */
-    navigation.navigate('Get started!')
+    alert('Course Created!');
+    navigation.navigate('Home')
   };
 
   return (
