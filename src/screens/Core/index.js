@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { View, Text, SectionList, FlatList } from 'react-native';
-import core from '../../../assets/data/core.js';
 import styles from './styles';
 import Course from '../../components/Course';
 import NewCourseButton from '../../components/NewCourseButton';
+import { useNavigation } from '@react-navigation/native';
 import { openDatabase } from 'react-native-sqlite-storage';
 
 
@@ -53,6 +53,17 @@ const CoreScreen = props => {
       );
     });
   }
+
+  const navigation = useNavigation();
+
+  React.useEffect(() => {
+    const unsubscribe = navigation.addListener('focus', () => {
+      getStatusCourses("Complete");
+      getStatusCourses("In Progress");
+      getStatusCourses("Not Complete");
+    });
+    return unsubscribe;
+  }, [navigation]);
 
   useEffect(async () => {
     await getStatusCourses("Complete");

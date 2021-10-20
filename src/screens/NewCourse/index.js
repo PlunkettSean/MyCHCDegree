@@ -69,7 +69,8 @@ const NewCourseScreen = props => {
     );
     */
     alert('Course Created!');
-    navigation.navigate('Home')
+    window.location.reload(true);
+    navigation.navigate('Get started!')
   };
 
   return (

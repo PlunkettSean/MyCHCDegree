@@ -1,10 +1,62 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
 import { View, Text, ImageBackground, Pressable } from 'react-native';
 import styles from './styles';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import { useNavigation } from '@react-navigation/native';
+import { openDatabase } from 'react-native-sqlite-storage';
+
+const database = require('../../components/Handlers/database.js');
+
+const tableName = 'courses';
+
+const courseDB = openDatabase({ name: 'CourseList.db' });
 
 const HomeScreen = props => {
+  const [allCourses, setAllCourses] = useState([]);
+
+  const getAllCourses = () => {
+    courseDB.transaction(txn => {
+      txn.executeSql(
+        `SELECT * FROM ${tableName} WHERE status IN ('Complete')`,
+        [],
+        (sqlTxn, res) => {
+          console.log("Courses retrieved successfully");
+          let len = res.rows.length;
+          // console.warn(len)
+          if (len > 0) {
+            let results = [];
+            for (let i = 0; i < len; i++) {
+              let item = res.rows.item(i);
+              results.push({ id: item.id, code: item.code, name: item.name, credits: item.credits, semester: item.semester, status: item.status, designator: item.designator });
+              console.log(results[i])
+            }
+            setAllCourses(results);
+
+            // console.warn('[DATA]', results[0])
+          }
+        },
+        error => {
+          console.log("error on getting courses " + error.message);
+        },
+      );
+    });
+  }
+  React.useEffect(() => {
+    const unsubscribe = navigation.addListener('focus', () => {
+      getAllCourses();
+    });
+    return unsubscribe;
+  }, [navigation]);
+
+  var credits = 0;
+  for (var i = 0; i < allCourses.length; i++) {
+    credits += allCourses[i].credits;
+  }
+
+  useEffect(async () => {
+    await getAllCourses();
+  }, []);
+
   const navigation = useNavigation();
   return (
     <View style={styles.container}>
@@ -12,7 +64,8 @@ const HomeScreen = props => {
         source={require('../../../assets/images/wallpaper.jpg')}
         style={styles.image}>
         {/* Title */}
-        <Text style={styles.title}>Countdown to Graduation</Text>
+        <Text style={styles.title}>Countdown to Graduation            Total credits: {credits}/120</Text>
+        <Text style={styles.title}></Text>
       </ImageBackground>
       {/* Button */}
       <View style={styles.bottomContainer}>

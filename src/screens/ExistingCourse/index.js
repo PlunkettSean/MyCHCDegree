@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, TextInput } from 'react-native';
+import { View, Text, TouchableOpacity, TextInput, Alert } from 'react-native';
 import styles from './styles';
 import SelectDropdown from 'react-native-select-dropdown/src/SelectDropdown';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
@@ -49,7 +49,25 @@ const ExistingCourseScreen = props => {
 
     updateCourse();
     alert('Course Updated!');
-    navigation.navigate('Home')
+    navigation.navigate('Get started!')
+  };
+
+  const showConfirmDialog = () => {
+    return Alert.alert(
+      "Are your sure?",
+      "Are you sure you want to remove this course?",
+      [
+        {
+          text: "Yes",
+          onPress: () => {
+            onCourseDelete();
+          },
+        },
+        {
+          text: "No",
+        },
+      ]
+    );
   };
 
   const onCourseDelete = () => {
@@ -71,7 +89,8 @@ const ExistingCourseScreen = props => {
     deleteCourse();
     alert('Course Deleted!');
     // console.warn('Course Deleted!');
-    navigation.navigate('Home')
+
+    navigation.navigate('Get started!')
   };
 
 
@@ -86,7 +105,7 @@ const ExistingCourseScreen = props => {
           <TouchableOpacity style={styles.button} onPress={onCourseUpdate}>
             <Text style={styles.buttonText}>Update</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.button} onPress={onCourseDelete}>
+          <TouchableOpacity style={styles.button} onPress={showConfirmDialog}>
             <Text style={styles.buttonText}>Delete</Text>
           </TouchableOpacity>
         </View>

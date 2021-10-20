@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { View, Text, SectionList, FlatList } from 'react-native';
-import all from '../../../assets/data/all';
 import styles from './styles';
 import Course from '../../components/Course';
 import NewCourseButton from '../../components/NewCourseButton';
+import { useNavigation } from '@react-navigation/native';
 import { openDatabase } from 'react-native-sqlite-storage';
-import { ScrollView } from "react-native-gesture-handler";
 
 const database = require('../../components/Handlers/database.js');
 
@@ -17,6 +16,8 @@ const AllScreen = props => {
   const [completeCourses, setCompleteCourses] = useState([]);
   const [inProgressCourses, setInProgressCourses] = useState([]);
   const [notCompleteCourses, setNotCompleteCourses] = useState([]);
+
+  const navigation = useNavigation();
 
   const getStatusCourses = (status) => {
     courseDB.transaction(txn => {
@@ -53,6 +54,14 @@ const AllScreen = props => {
       );
     });
   }
+  React.useEffect(() => {
+    const unsubscribe = navigation.addListener('focus', () => {
+      getStatusCourses("Complete");
+      getStatusCourses("In Progress");
+      getStatusCourses("Not Complete");
+    });
+    return unsubscribe;
+  }, [navigation]);
 
   useEffect(async () => {
     await getStatusCourses("Complete");

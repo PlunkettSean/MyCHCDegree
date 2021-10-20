@@ -1,6 +1,6 @@
 import React from 'react';
-import {createStackNavigator} from '@react-navigation/stack';
-import {NavigationContainer} from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
 import HomeScreen from '../screens/Home';
 import TabNavigator from './TabNavigator';
 import NewCourseScreen from '../screens/NewCourse';
@@ -13,11 +13,7 @@ const Router = props => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen
-          name={'Home'}
-          component={HomeScreen}
-          options={{headerShown: false}}
-        />
+        <Stack.Screen name={'Home'} component={HomeScreen} options={{ headerShown: false }} />
         <Stack.Screen name={'Get started!'} component={TabNavigator} />
         <Stack.Screen name={'New Course'} component={NewCourseScreen} />
         <Stack.Screen name={'Core'} component={CoreScreen} />
