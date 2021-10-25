@@ -64,7 +64,7 @@ const HomeScreen = props => {
         source={require('../../../assets/images/wallpaper.jpg')}
         style={styles.image}>
         {/* Title */}
-        <Text style={styles.title}>Countdown to Graduation            Total credits: {credits}/120</Text>
+        <Text style={styles.title}>Countdown to Graduation {"\n"} Total credits: {credits}/120</Text>
         <Text style={styles.title}></Text>
       </ImageBackground>
       {/* Button */}
