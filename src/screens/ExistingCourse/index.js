@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, TextInput, Alert } from 'react-native';
+import { View, Text, TouchableOpacity, TextInput, Alert, Pressable } from 'react-native';
 import styles from './styles';
 import SelectDropdown from 'react-native-select-dropdown/src/SelectDropdown';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
@@ -49,7 +49,7 @@ const ExistingCourseScreen = props => {
 
     updateCourse();
     alert('Course Updated!');
-    navigation.navigate('Get started!')
+    navigation.navigate('All')
   };
 
   const showConfirmDialog = () => {
@@ -88,9 +88,7 @@ const ExistingCourseScreen = props => {
 
     deleteCourse();
     alert('Course Deleted!');
-    // console.warn('Course Deleted!');
-
-    navigation.navigate('Get started!')
+    navigation.navigate('All')
   };
 
 
@@ -100,16 +98,6 @@ const ExistingCourseScreen = props => {
 
   return (
     <View style={styles.container}>
-      <View style={styles.headerContainer}>
-        <View style={styles.buttonContainer}>
-          <TouchableOpacity style={styles.button} onPress={onCourseUpdate}>
-            <Text style={styles.buttonText}>Update</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.button} onPress={showConfirmDialog}>
-            <Text style={styles.buttonText}>Delete</Text>
-          </TouchableOpacity>
-        </View>
-      </View>
       <View style={styles.newCourseContainer}>
         <TextInput
           value={code}
@@ -182,6 +170,14 @@ const ExistingCourseScreen = props => {
           rowTextStyle={styles.dropDownRowTextStyle}
           defaultValue={post.designator}
         />
+      </View>
+      <View style={styles.bottomContainer}>
+        <Pressable style={styles.searchButton} onPress={onCourseUpdate}>
+          <Text style={styles.searchButtonText}>Update Course</Text>
+        </Pressable>
+        <Pressable style={styles.searchButton} onPress={showConfirmDialog}>
+          <Text style={styles.searchButtonText}>Delete Course</Text>
+        </Pressable>
       </View>
     </View>
   );

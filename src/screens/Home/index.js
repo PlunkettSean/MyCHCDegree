@@ -64,14 +64,16 @@ const HomeScreen = props => {
         source={require('../../../assets/images/wallpaper.jpg')}
         style={styles.image}>
         {/* Title */}
-        <Text style={styles.title}>Countdown to Graduation</Text>
-
-        <Text style={styles.school}>Chestnut Hill College</Text>
+        <View style={styles.header}>
+          <Text style={styles.title}>Countdown to Graduation</Text>
+          <Text style={styles.school}>Chestnut Hill College</Text>
+        </View>
         {/* Countdown */}
-        <Text style={styles.countdown}>{120 - credits} credits until my graduation.</Text>
+
       </ImageBackground>
       {/* Button */}
       <View style={styles.bottomContainer}>
+        <Text style={styles.countdown}>{120 - credits} credits until my graduation.</Text>
         <Pressable
           style={styles.searchButton}
           onPress={() => navigation.navigate('Get started!')}>

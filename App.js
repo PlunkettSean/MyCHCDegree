@@ -8,8 +8,9 @@
 
 import 'react-native-gesture-handler';
 import React from 'react';
-import { Node } from 'react';
 import Router from './src/navigation/Router';
+import { StatusBar } from 'react-native';
+StatusBar.setBarStyle('dark-content', true);
 const database = require('./src/components/Handlers/database.js')
 
 

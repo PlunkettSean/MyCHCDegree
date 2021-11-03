@@ -1,4 +1,4 @@
-import { StyleSheet, Dimensions } from 'react-native';
+import { StyleSheet, Dimensions, StatusBar } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -6,6 +6,9 @@ const styles = StyleSheet.create({
     position: 'absolute',
     width: '100%',
     height: '100%',
+  },
+  header: {
+    marginTop: 40,
   },
   image: {
     width: '100%',
@@ -17,7 +20,7 @@ const styles = StyleSheet.create({
     fontSize: 50,
     fontWeight: 'bold',
     position: 'absolute',
-    top: 70,
+    top: 0,
     color: 'white',
     width: '100%',
     textAlign: 'center',
@@ -26,7 +29,7 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: 'bold',
     position: 'absolute',
-    top: 190,
+    top: 120,
     color: 'white',
     width: '100%',
     textAlign: 'center',
@@ -35,7 +38,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
     position: 'absolute',
-    bottom: 95,
+    bottom: 80,
     color: 'white',
     width: '100%',
     textAlign: 'center',

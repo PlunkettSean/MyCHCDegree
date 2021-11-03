@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, TextInput } from 'react-native';
+import { View, Text, TouchableOpacity, TextInput, Pressable } from 'react-native';
 import styles from './styles';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import SelectDropdown from 'react-native-select-dropdown/src/SelectDropdown';
@@ -74,11 +74,6 @@ const NewCourseScreen = props => {
 
   return (
     <View style={styles.container}>
-      <View style={styles.headerContainer}>
-        <TouchableOpacity style={styles.button} onPress={onCourseAdd} >
-          <Text style={styles.buttonText}>Add</Text>
-        </TouchableOpacity>
-      </View>
       <View style={styles.newCourseContainer}>
         <TextInput
           value={code}
@@ -150,6 +145,11 @@ const NewCourseScreen = props => {
           rowStyle={styles.dropDownRowStyle}
           rowTextStyle={styles.dropDownRowTextStyle}
         />
+      </View>
+      <View style={styles.bottomContainer}>
+        <Pressable style={styles.searchButton} onPress={onCourseAdd}>
+          <Text style={styles.searchButtonText}>Add Course</Text>
+        </Pressable>
       </View>
     </View>
   );

@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -16,6 +16,29 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 18,
   },
+  searchButton: {
+    backgroundColor: 'red',
+    margin: 5,
+    height: 50,
+    borderRadius: 30,
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'row',
+    zIndex: 100,
+    width: Dimensions.get('screen').width - 40,
+    marginHorizontal: 20,
+  },
+  searchButtonText: {
+    color: 'white',
+    fontWeight: 'bold',
+    fontSize: 18,
+  },
+  bottomContainer: {
+    width: '100%',
+    height: 60,
+    position: 'absolute',
+    bottom: 90,
+  },
   headerContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -29,6 +52,7 @@ const styles = StyleSheet.create({
     left: 150,
   },
   newCourseContainer: {
+    top: 20,
     padding: 15,
     width: '100%',
   },
