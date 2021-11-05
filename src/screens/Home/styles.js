@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   header: {
-    marginTop: 40,
+    marginTop: 10,
   },
   image: {
     width: '100%',
@@ -29,7 +29,6 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: 'bold',
     position: 'absolute',
-    top: 120,
     color: 'white',
     width: '100%',
     textAlign: 'center',

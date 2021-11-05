@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { View, Text, ImageBackground, Pressable } from 'react-native';
+import { View, Text, ImageBackground, Pressable, SafeAreaView } from 'react-native';
 import styles from './styles';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import { useNavigation } from '@react-navigation/native';
@@ -60,17 +60,18 @@ const HomeScreen = props => {
   const navigation = useNavigation();
   return (
     <View style={styles.container}>
+
+
       <ImageBackground
         source={require('../../../assets/images/wallpaper.jpg')}
         style={styles.image}>
-        {/* Title */}
-        <View style={styles.header}>
-          <Text style={styles.title}>Countdown to Graduation</Text>
-          <Text style={styles.school}>Chestnut Hill College</Text>
-        </View>
-        {/* Countdown */}
-
       </ImageBackground>
+      <SafeAreaView style={{ flex: 0.0 }}></SafeAreaView>
+      <View style={styles.header}>
+        <Text style={styles.title}>Countdown to Graduation
+          <Text style={styles.school}>{"\n"}Chestnut Hill College</Text></Text>
+
+      </View>
       {/* Button */}
       <View style={styles.bottomContainer}>
         <Text style={styles.countdown}>{120 - credits} credits until my graduation.</Text>
