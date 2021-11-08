@@ -16,7 +16,7 @@ const NewCourseScreen = props => {
   const [designator, setDesignator] = useState('');
 
   const statuses = ['Complete', 'In Progress', 'Not Complete'];
-  const designators = ['1st Major', '2nd Major', '1st Minor', '2nd Minor', 'Core', 'Elective', 'General Elective']
+  const designators = ['1st Major', '2nd Major', '1st Minor', '2nd Minor', 'Core', 'Elective']
   const navigation = useNavigation();
 
   const onCourseAdd = () => {

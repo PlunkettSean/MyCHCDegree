@@ -17,10 +17,8 @@ const ExistingCourseScreen = props => {
 
   const post = props.route.params.post;
 
-  // console.warn("[NAME]", props.route.params.post);
-
   const statuses = ['Complete', 'In Progress', 'Not Complete'];
-  const designators = ['1st Major', '2nd Major', '1st Minor', '2nd Minor', 'Core', 'Elective', 'General Elective']
+  const designators = ['1st Major', '2nd Major', '1st Minor', '2nd Minor', 'Core', 'Elective']
 
   const [code, setCode] = useState(post.code);
   const [name, setName] = useState(post.name);
