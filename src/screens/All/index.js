@@ -54,7 +54,7 @@ const AllScreen = props => {
       );
     });
   }
-  React.useEffect(() => {
+  React.useEffect(async () => {
     const unsubscribe = navigation.addListener('focus', () => {
       getStatusCourses("Complete");
       getStatusCourses("In Progress");

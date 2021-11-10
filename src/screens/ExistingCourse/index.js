@@ -85,9 +85,41 @@ const ExistingCourseScreen = props => {
     }
 
     deleteCourse();
-    alert('Course Deleted!');
-    navigation.navigate('All')
+
+    const getStatusCourses = () => {
+      courseDB.transaction(txn => {
+        txn.executeSql(
+          `SELECT * FROM ${tableName}`,
+          [],
+          (sqlTxn, res) => {
+            console.log("Courses retrieved successfully");
+            let len = res.rows.length;
+            if (len < 1) {
+              navigation.reset({
+                index: 0,
+                routes: [{ name: "Home" }],
+              });
+              alert('Course Deleted!');
+              navigation.navigate('Home')
+            }
+            else {
+              alert('Course Deleted!');
+              navigation.navigate('Get started!')
+            }
+          },
+          error => {
+            console.log("error on getting courses " + error.message);
+          },
+        );
+      });
+    }
+
+    getStatusCourses();
+
+
   };
+
+
 
 
   // console.warn("[DBUG]", credits);

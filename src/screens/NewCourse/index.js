@@ -69,7 +69,7 @@ const NewCourseScreen = props => {
     );
     */
     alert('Course Created!');
-    navigation.navigate('Get started!')
+    navigation.push('Get started!')
   };
 
   return (
