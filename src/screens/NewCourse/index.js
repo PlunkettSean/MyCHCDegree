@@ -76,6 +76,7 @@ const NewCourseScreen = props => {
     <View style={styles.container}>
       <View style={styles.newCourseContainer}>
         <TextInput
+          autoCapitalize={"characters"}
           value={code}
           onChangeText={value => setCode(value)}
           style={styles.codeInput}
