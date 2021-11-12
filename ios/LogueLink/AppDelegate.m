@@ -30,8 +30,8 @@ static void InitializeFlipper(UIApplication *application) {
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-
-NSURL *jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index.js" fallbackResource:nil];
+{
+  NSURL *jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index.js" fallbackResource:nil];
 
   RCTBridge *bridge = [[RCTBridge alloc] initWithBundleURL:jsCodeLocation
                                               moduleProvider:nil
@@ -39,13 +39,11 @@ NSURL *jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBun
   #if RCT_DEV
    [bridge moduleForClass:[RCTDevLoadingView class]];
   #endif
-
-{
 #ifdef FB_SONARKIT_ENABLED
   InitializeFlipper(application);
 #endif
 
-  RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
+  //RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
   RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
                                                    moduleName:@"LogueLink"
                                             initialProperties:nil];
