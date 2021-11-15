@@ -9,7 +9,7 @@
 import 'react-native-gesture-handler';
 import React from 'react';
 import Router from './src/navigation/Router';
-import { StatusBar } from 'react-native';
+import { LogBox, StatusBar } from 'react-native';
 StatusBar.setBarStyle('dark-content', true);
 const database = require('./src/components/Handlers/database.js')
 
@@ -24,5 +24,5 @@ const App = () => {
 
   return <Router />;
 };
-
+LogBox.ignoreLogs(['Reanimated 2']);
 export default App;
