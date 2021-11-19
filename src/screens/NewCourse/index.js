@@ -94,15 +94,6 @@ const NewCourseScreen = props => {
           clearButtonMode={'while-editing'}
         />
         <TextInput
-          value={semester}
-          onChangeText={value => setSemester(value)}
-          style={styles.semesterInput}
-          placeholder={'Semester'}
-          placeholderTextColor={'grey'}
-          clearButtonMode={'while-editing'}
-          maxLength={11}
-        />
-        <TextInput
           value={credits}
           onChangeText={value => setCredits(value)}
           style={styles.creditsInput}
@@ -111,6 +102,15 @@ const NewCourseScreen = props => {
           clearButtonMode={'while-editing'}
           keyboardType={'numeric'}
           maxLength={1}
+        />
+        <TextInput
+          value={semester}
+          onChangeText={value => setSemester(value)}
+          style={styles.semesterInput}
+          placeholder={'Semester'}
+          placeholderTextColor={'grey'}
+          clearButtonMode={'while-editing'}
+          maxLength={11}
         />
         <SelectDropdown
           data={statuses}
